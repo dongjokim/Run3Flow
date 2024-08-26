@@ -19,7 +19,7 @@ plotParams = {
 
 cent = np.array([0, 5, 10, 20, 30,40, 50, 60, 80]);
 
-plot = JPyPlotRatio.JPyPlotRatio(panels=(3,2), #number of panels (each with ratio)
+plot = JPyPlotRatio.JPyPlotRatio(panels=(3,3), #number of panels (each with ratio)
 	xlabel="$p_\\mathrm{T}$", #create a 3x3 grid plot
 	panelLabel={i: "{}--{} %".format(cent[i],cent[i+1]) for i in range(0,cent.size-1)}, #label the panels v_n
 	#panelScaling={1:2.0,2:3.0}, #add scaling to some of the panels (panel index : scale factor)
@@ -31,8 +31,8 @@ plot = JPyPlotRatio.JPyPlotRatio(panels=(3,2), #number of panels (each with rati
 plots = {};
 gr_vn = {};
 for ic in range(0,6):
-	gr_vn[(0,ic)] = data["Run2"].Get("Table 2/Graph1D_y{}".format(ic));
-	plots[0] = plot.Add(ic,gr_vn[(0,ic)],**plotParams["Run2"]);
+	#gr_vn[(0,ic)] = data["Run2"].Get("Table 2/Graph1D_y{}".format(ic));
+	#plots[0] = plot.Add(ic,gr_vn[(0,ic)],**plotParams["Run2"]);
 	gr_vn[(1,ic)] = data["Run3"].Get("gPt_{}".format(ic));
 	plots[1] = plot.Add(ic,gr_vn[(1,ic)],**plotParams["Run3"]);
 	#plot.Ratio(plots["Run3"],plots["Run2"]);
