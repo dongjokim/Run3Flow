@@ -11,6 +11,7 @@ data = {
 		"Run3":ROOT.TFile("data/vn_run3.root","read"),
 		"Run3_v2":ROOT.TFile("data/vn_run3_v2.root","read"),
 		"Run3_v3":ROOT.TFile("data/vn_run3_pass4.root","read"),
+		"Run3_v4":ROOT.TFile("data/vn_run3_pass4-JP.root","read"),
 };
 
 plotParams = {
@@ -18,6 +19,7 @@ plotParams = {
 		"Run3":{"color":"red","fmt":"o",'fillstyle':'none',"label":"5.36 TeV"},
         "Run3_v2":{"color":"red","fmt":"D",'fillstyle':'none',"label":"5.36 v2 TeV"},
         "Run3_v3":{"color":"blue","fmt":"*",'fillstyle':'none',"label":"5.36 pass4 TeV"},
+        "Run3_v4":{"color":"cyan","fmt":"+",'fillstyle':'none',"label":"5.36 pass4 JP TeV"},
         #"jyu_hydro":{"plotType":"theory","color":"orange","linestyle":"--","alpha":0.7,"label":"{T\\raisebox{-.5ex}{R}ENTo}+VISH(2+1)+UrQMD"},
 };
 
